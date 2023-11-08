@@ -53,15 +53,13 @@ function scrollToView(li, section){
 // Set sections as active
 function makeActive(){
   allSections.forEach(function(section, SectionIndex){
-    console.log("Section " + SectionIndex);
       const box = section.getBoundingClientRect();
       if (box.top <= 150 && box.bottom >= 150) {
           section.classList.add("your-active-class");
           
           const AllLinks = document.querySelectorAll('li');
-
+//make links active
           AllLinks.forEach(function(link, index){
-            console.log("link " + index);
             if(SectionIndex === index){
               link.classList.add('active-class');
             }else{
